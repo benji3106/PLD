@@ -82,5 +82,29 @@
     "type": "FAILED",
     "id": "FC-104",
     "message": "FC-104 · checker échoué — VIP ne signifie pas backstage.\n\nfalse !== true\n"
+  },
+  {
+    "ts": "2026-09-02T13:51:13.706Z",
+    "type": "FAILED",
+    "id": "FC-104",
+    "message": "FC-104 · checker échoué — VIP ne signifie pas backstage.\n\nfalse !== true\n"
+  },
+  {
+    "ts": "2026-09-02T13:54:48.025Z",
+    "type": "CLEARED",
+    "id": "FC-104",
+    "message": "FC-104 · Backstage breach — INCIDENT CLEARED (+100 XP)"
+  },
+  {
+    "ts": "2026-09-02T13:54:48.026Z",
+    "type": "UNLOCK",
+    "id": "FC-104",
+    "message": "ACTE 3 DÉVERROUILLÉ — LA FOULE MONTE"
+  },
+  {
+    "ts": "2026-09-02T14:15:42.704Z",
+    "type": "FAILED",
+    "id": "FC-106",
+    "message": "FC-106 · checker échoué — Une zone à capacité exacte est déjà pleine.\n\nfalse !== true\n"
   }
 ]

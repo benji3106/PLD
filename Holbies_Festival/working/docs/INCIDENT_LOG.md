@@ -98,6 +98,39 @@ npm run check -- FC-103
 
 ---
 
+## FC-104 - Backstage breach
+
+**Symptôme observé :**
+Accès non autorisé à la zone backstage.
+
+**Cause racine :**
+La fonction `checkAccess` dans `accessService.js` ne vérifiait pas correctement les droits d'accès pour la zone backstage.
+
+**Correction appliquée :**
+Vérification renforcée des droits d'accès pour la zone backstage.
+
+**Pourquoi cette correction respecte la documentation de référence :**
+La séquence d'accès (`working/docs/diagrams/03_access_sequence.mmd:12`) exige de vérifier le billet actif et sa validité.
+
+**Commande de validation :**
+```bash
+npm run check -- FC-104
+```
+
+**Résultat :**
+```bash
+> holbies-festival-control@1.3.0 check
+> node private/checker.js check FC-104
+
+
+✓ FC-104 — Backstage breach
+  INCIDENT CLEARED
+
+  ACTE 3 DÉVERROUILLÉ — LA FOULE MONTE 
+```
+
+---
+
 ## FC-105 - Scène morte : Transition non autorisée de EVACUATED vers LIVE
 
 **Symptôme observé :**

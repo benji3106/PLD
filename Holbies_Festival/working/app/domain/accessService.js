@@ -11,8 +11,7 @@ function checkAccess(state, wristbandId, zoneId, now = new Date('2026-09-02T17:0
   const zone = getZone(state, zoneId);
   if (!zone) return { allowed:false, code:'ZONE_NOT_FOUND' };
 
-
-  const hasLevel = wristband.level === 'VIP' || zone.requiredLevels.includes(wristband.level);
+  const hasLevel = zone.requiredLevels.includes(wristband.level);
   if (!hasLevel) return { allowed:false, code:'LEVEL_FORBIDDEN' };
 
   if (zone.occupancy > zone.capacity) return { allowed:false, code:'ZONE_FULL' };

@@ -14,7 +14,7 @@ La fonction `scheduleShow` dans `scheduleService.js` ne vérifiait pas les confl
 Ajout d'une vérification dans `scheduleShow` (ligne 21-24) utilisant la fonction `overlaps` pour détecter les chevauchements d'horaire sur la même scène. Si un conflit est détecté, la fonction retourne `{ ok: false, code: 'STAGE_CONFLICT', message: 'Stage déjà réservé à cet horaire.' }`.
 
 **Pourquoi cette correction respecte la documentation de référence :**
-La logique métier exige qu'une scène ne puisse pas être réservée simultanément pour deux spectacles. Cette correction implémente cette règle en utilisant la fonction `overlaps` existante pour valider les créneaux horaires.
+La logique métier (`04_schedule_sequence.mmd:11`) exige qu'une scène ne puisse pas être réservée simultanément pour deux spectacles. Cette correction implémente cette règle en utilisant la fonction `overlaps` existante pour valider les créneaux horaires.
 
 **Commande de validation :**
 ```bash
@@ -45,7 +45,7 @@ La fonction `scheduleShow` dans `scheduleService.js` ne vérifiait pas les confl
 Ajout d'une vérification dans `scheduleShow` (ligne 27-30) utilisant la fonction `overlaps` pour détecter les chevauchements d'horaire pour le même artiste. Si un conflit est détecté, la fonction retourne `{ ok: false, code: 'ARTIST_CONFLICT', message: 'Artiste déjà programmé à cet horaire.' }`.
 
 **Pourquoi cette correction respecte la documentation de référence :**
-La logique métier exige qu'un artiste ne puisse pas être programmé simultanément sur deux scènes différentes. Cette correction implémente cette règle en utilisant la fonction `overlaps` existante pour valider les créneaux horaires.
+La logique métier (`04_schedule_sequence.mmd:12`) exige qu'un artiste ne puisse pas être programmé simultanément sur deux scènes différentes. Cette correction implémente cette règle en utilisant la fonction `overlaps` existante pour valider les créneaux horaires.
 
 **Commande de validation :**
 ```bash
@@ -79,7 +79,7 @@ La fonction `checkAccess` dans `accessService.js` ne vérifiait pas l'état (`st
 Ajout d'une vérification dans `checkAccess` (ligne 10) pour rejeter l'accès si `ticket.status !== 'ACTIVE'`, retournant `{ allowed:false, code:'TICKET_INACTIVE' }`.
 
 **Pourquoi cette correction respecte la documentation de référence :**
-Le diagramme d'état (`06_ticket_state.mmd`) montre que seul l'état ACTIVE est valide pour un accès. La séquence d'accès (`03_access_sequence.mmd:12`) exige explicitement de vérifier que le billet est actif.
+Le diagramme d'état (`03_access_sequence.mmd:12`) montre que seul l'état ACTIVE est valide pour un accès. La séquence d'accès (`03_access_sequence.mmd:12`) exige explicitement de vérifier que le billet est actif.
 
 **Commande de validation :**
 ```bash

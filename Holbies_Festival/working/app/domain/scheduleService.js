@@ -24,6 +24,12 @@ function scheduleShow(state, show) {
   );
   if (stageConflict) return { ok: false, code: 'STAGE_CONFLICT', message: 'Stage déjà réservé à cet horaire.' };
 
+  const artistConflict = state.shows.some(s =>
+    s.artistId === show.artistId &&
+    overlaps(s.start, s.end, show.start, show.end)
+  );
+  if (artistConflict) return { ok: false, code: 'ARTIST_CONFLICT', message: 'Artiste déjà programmé à cet horaire.' };
+
   state.shows.push({ ...show, status: show.status || 'SCHEDULED' });
   return { ok:true, show };
 }

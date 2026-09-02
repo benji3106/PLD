@@ -33,6 +33,39 @@ npm run check -- FC-101
 
 ---
 
+## FC-102 - Artiste ubiquitaire
+
+**Symptôme observé :**
+Il était possible de programmer le même artiste sur deux scènes différentes à des horaires qui se chevauchent.
+
+**Cause racine :**
+La fonction `scheduleShow` dans `scheduleService.js` ne vérifiait pas les conflits d'horaire pour un même artiste avant d'ajouter un nouveau spectacle.
+
+**Correction appliquée :**
+Ajout d'une vérification dans `scheduleShow` (ligne 27-30) utilisant la fonction `overlaps` pour détecter les chevauchements d'horaire pour le même artiste. Si un conflit est détecté, la fonction retourne `{ ok: false, code: 'ARTIST_CONFLICT', message: 'Artiste déjà programmé à cet horaire.' }`.
+
+**Pourquoi cette correction respecte la documentation de référence :**
+La logique métier exige qu'un artiste ne puisse pas être programmé simultanément sur deux scènes différentes. Cette correction implémente cette règle en utilisant la fonction `overlaps` existante pour valider les créneaux horaires.
+
+**Commande de validation :**
+```bash
+npm run check -- FC-102
+```
+
+**Résultat :**
+```bash
+> holbies-festival-control@1.3.0 check
+> node private/checker.js check FC-102
+
+
+✓ FC-102 — Artiste ubiquitaire
+  INCIDENT CLEARED
+
+  ACTE 2 DÉVERROUILLÉ — LES PORTES S’ENTROUVRENT
+```
+
+---
+
 
 ## FC-105 - Scène morte : Transition non autorisée de EVACUATED vers LIVE
 

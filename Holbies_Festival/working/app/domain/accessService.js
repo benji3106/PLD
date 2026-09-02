@@ -14,7 +14,7 @@ function checkAccess(state, wristbandId, zoneId, now = new Date('2026-09-02T17:0
   const hasLevel = zone.requiredLevels.includes(wristband.level);
   if (!hasLevel) return { allowed:false, code:'LEVEL_FORBIDDEN' };
 
-  if (zone.occupancy > zone.capacity) return { allowed:false, code:'ZONE_FULL' };
+  if (zone.occupancy >= zone.capacity) return { allowed:false, code:'ZONE_FULL' };
 
   return { allowed:true, code:'ACCESS_GRANTED', zone: zone.id, owner: ticket.owner };
 }

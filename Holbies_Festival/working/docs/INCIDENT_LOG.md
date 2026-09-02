@@ -162,6 +162,39 @@ npm run check -- FC-105
 
 ---
 
+## FC-106 - Une personne de trop
+
+**Symptôme observé :**
+Il était possible d'accorder l'accès à une zone même lorsque son occupation était déjà égale à sa capacité maximale, permettant ainsi à une personne supplémentaire d'entrer.
+
+**Cause racine :**
+La fonction `checkAccess` dans `accessService.js` utilisait une comparaison `>` (ligne 17) pour vérifier si `zone.occupancy` dépassait `zone.capacity`, ce qui permettait à une personne de plus d'entrer lorsque `occupancy == capacity`.
+
+**Correction appliquée :**
+Changement de la condition en `zone.occupancy >= zone.capacity` (ligne 17) pour bloquer l'accès dès que l'occupation atteint ou dépasse la capacité.
+
+**Pourquoi cette correction respecte la documentation de référence :**
+Le modèle de données (`01_data_model.mmd:48-49`) définit `capacity` et `occupancy` pour la zone. La logique métier exige que l'accès soit refusé lorsque l'occupation atteint la capacité maximale, ce qui est maintenant implémenté.
+
+**Commande de validation :**
+```bash
+npm run check -- FC-106
+```
+
+**Résultat :**
+```bash
+> holbies-festival-control@1.3.0 check
+> node private/checker.js check FC-106
+
+
+✓ FC-106 — Une personne de trop
+  INCIDENT CLEARED
+
+  ACTE 4 DÉVERROUILLÉ — LE SYSTÈME MENT
+```
+
+---
+
 ## FC-XXX - Titre
 
 **Symptôme observé :**

@@ -106,5 +106,17 @@
     "type": "FAILED",
     "id": "FC-106",
     "message": "FC-106 · checker échoué — Une zone à capacité exacte est déjà pleine.\n\nfalse !== true\n"
+  },
+  {
+    "ts": "2026-09-02T14:16:12.773Z",
+    "type": "CLEARED",
+    "id": "FC-106",
+    "message": "FC-106 · Une personne de trop — INCIDENT CLEARED (+100 XP)"
+  },
+  {
+    "ts": "2026-09-02T14:16:12.774Z",
+    "type": "UNLOCK",
+    "id": "FC-106",
+    "message": "ACTE 4 DÉVERROUILLÉ — LE SYSTÈME MENT"
   }
 ]

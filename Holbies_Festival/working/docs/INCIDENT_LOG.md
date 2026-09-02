@@ -2,6 +2,38 @@
 
 Pour chaque incident, documentez **avant** de célébrer le CLEARED :
 
+## FC-101 - Double réservation de scène
+
+**Symptôme observé :**
+Il était possible de réserver la même scène pour deux spectacles avec des horaires qui se chevauchent.
+
+**Cause racine :**
+La fonction `scheduleShow` dans `scheduleService.js` ne vérifiait pas les conflits d'horaire pour une même scène avant d'ajouter un nouveau spectacle.
+
+**Correction appliquée :**
+Ajout d'une vérification dans `scheduleShow` (ligne 21-24) utilisant la fonction `overlaps` pour détecter les chevauchements d'horaire sur la même scène. Si un conflit est détecté, la fonction retourne `{ ok: false, code: 'STAGE_CONFLICT', message: 'Stage déjà réservé à cet horaire.' }`.
+
+**Pourquoi cette correction respecte la documentation de référence :**
+La logique métier exige qu'une scène ne puisse pas être réservée simultanément pour deux spectacles. Cette correction implémente cette règle en utilisant la fonction `overlaps` existante pour valider les créneaux horaires.
+
+**Commande de validation :**
+```bash
+npm run check -- FC-101
+```
+
+**Résultat :**
+```bash
+> holbies-festival-control@1.3.0 check
+> node private/checker.js check FC-101
+
+
+✓ FC-101 — Collision de scène
+  INCIDENT CLEARED
+```
+
+---
+
+
 ## FC-105 - Scène morte : Transition non autorisée de EVACUATED vers LIVE
 
 **Symptôme observé :**
@@ -21,10 +53,17 @@ Le diagramme Mermaid (`05_stage_state.mmd:12`) spécifie que la seule transition
 npm run check -- FC-105
 ```
 
-**Résultat :** CLEARED
+**Résultat :**
+```bash
+> holbies-festival-control@1.3.0 check
+> node private/checker.js check FC-105
+
+
+✓ FC-105 — Scène morte
+  INCIDENT CLEARED
+```
 
 ---
-
 ## FC-XXX - Titre
 
 **Symptôme observé :**

@@ -18,6 +18,12 @@ function scheduleShow(state, show) {
   if (!state.artists.some(a => a.id === show.artistId)) return { ok:false, code:'ARTIST_NOT_FOUND' };
   if (!state.stages.some(s => s.id === show.stageId)) return { ok:false, code:'STAGE_NOT_FOUND' };
 
+  const stageConflict = state.shows.some(s =>
+    s.stageId === show.stageId &&
+    overlaps(s.start, s.end, show.start, show.end)
+  );
+  if (stageConflict) return { ok: false, code: 'STAGE_CONFLICT', message: 'Stage déjà réservé à cet horaire.' };
+
   state.shows.push({ ...show, status: show.status || 'SCHEDULED' });
   return { ok:true, show };
 }

@@ -3,7 +3,7 @@ const TRANSITIONS = {
   READY: ['LIVE', 'EVACUATED', 'CLOSED'],
   LIVE: ['PAUSED', 'READY', 'EVACUATED'],
   PAUSED: ['LIVE', 'READY', 'EVACUATED'],
-  EVACUATED: ['READY', 'LIVE']
+  EVACUATED: ['READY']
 };
 
 function transitionStage(state, stageId, nextStatus) {

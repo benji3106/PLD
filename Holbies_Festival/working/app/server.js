@@ -297,9 +297,9 @@ function createFestivalServer() {
       return json(res,result.ok?201:400,result);
     }
     if (req.method==='POST' && p==='/api/shows') {
-      const body=await readJson(req); if(body===null) return json(res,400,{error:'INVALID_JSON'});
+      const body=await readJson(req); if(body===null || !schedule.validateShowShape(body).ok) return json(res,400,{error:'INVALID_JSON'});
       const result=schedule.scheduleShow(state,body);
-      return json(res,result.ok?200:500,result);
+      return json(res,result.ok?201:409,result);
     }
     if (req.method==='PATCH' && /^\/api\/shows\/[^/]+\/reschedule$/.test(p)) {
       const id=p.split('/')[3]; const body=await readJson(req); if(body===null) return json(res,400,{error:'INVALID_JSON'});

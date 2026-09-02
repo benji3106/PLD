@@ -33,5 +33,10 @@
     "status": "CLEARED",
     "checkedAt": "2026-09-02T14:43:02.286Z",
     "attempts": 2
+  },
+  "FC-108": {
+    "status": "CLEARED",
+    "checkedAt": "2026-09-02T15:21:59.994Z",
+    "attempts": 12
   }
 }

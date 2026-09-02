@@ -130,5 +130,83 @@
     "type": "CLEARED",
     "id": "FC-107",
     "message": "FC-107 · Payload sauvage — INCIDENT CLEARED (+100 XP)"
+  },
+  {
+    "ts": "2026-09-02T14:48:54.064Z",
+    "type": "FAILED",
+    "id": "FC-108",
+    "message": "FC-108 · checker échoué — Une création réussie répond 201.\n\n200 !== 201\n"
+  },
+  {
+    "ts": "2026-09-02T14:50:21.999Z",
+    "type": "FAILED",
+    "id": "FC-108",
+    "message": "FC-108 · checker échoué — Une création réussie répond 201.\n\n200 !== 201\n"
+  },
+  {
+    "ts": "2026-09-02T14:50:34.050Z",
+    "type": "FAILED",
+    "id": "FC-108",
+    "message": "FC-108 · checker échoué — Une création réussie répond 201.\n\n200 !== 201\n"
+  },
+  {
+    "ts": "2026-09-02T14:51:47.571Z",
+    "type": "FAILED",
+    "id": "FC-108",
+    "message": "FC-108 · checker échoué — Une création réussie répond 201.\n\n200 !== 201\n"
+  },
+  {
+    "ts": "2026-09-02T14:53:06.257Z",
+    "type": "FAILED",
+    "id": "FC-108",
+    "message": "FC-108 · checker échoué — Un payload invalide répond 400.\n\n409 !== 400\n"
+  },
+  {
+    "ts": "2026-09-02T14:53:45.166Z",
+    "type": "FAILED",
+    "id": "FC-108",
+    "message": "FC-108 · checker échoué — Un conflit métier répond 409.\n\n500 !== 409\n"
+  },
+  {
+    "ts": "2026-09-02T14:53:58.629Z",
+    "type": "FAILED",
+    "id": "FC-108",
+    "message": "FC-108 · checker échoué — Un payload invalide répond 400.\n\n409 !== 400\n"
+  },
+  {
+    "ts": "2026-09-02T14:57:35.221Z",
+    "type": "FAILED",
+    "id": "FC-108",
+    "message": "FC-108 · checker échoué — Une création réussie répond 201.\n\n200 !== 201\n"
+  },
+  {
+    "ts": "2026-09-02T14:57:47.193Z",
+    "type": "FAILED",
+    "id": "FC-108",
+    "message": "FC-108 · checker échoué — Un conflit métier répond 409.\n\n500 !== 409\n"
+  },
+  {
+    "ts": "2026-09-02T14:58:04.317Z",
+    "type": "FAILED",
+    "id": "FC-108",
+    "message": "FC-108 · checker échoué — Un payload invalide répond 400.\n\n409 !== 400\n"
+  },
+  {
+    "ts": "2026-09-02T15:19:19.034Z",
+    "type": "CLEARED",
+    "id": "FC-108",
+    "message": "FC-108 · Mauvais signal HTTP — INCIDENT CLEARED (+100 XP)"
+  },
+  {
+    "ts": "2026-09-02T15:19:19.035Z",
+    "type": "UNLOCK",
+    "id": "FC-108",
+    "message": "GATES CLEARED — MODE ENCORE DÉVERROUILLÉ"
+  },
+  {
+    "ts": "2026-09-02T15:21:59.994Z",
+    "type": "CLEARED",
+    "id": "FC-108",
+    "message": "FC-108 · Mauvais signal HTTP — INCIDENT CLEARED (+100 XP)"
   }
 ]

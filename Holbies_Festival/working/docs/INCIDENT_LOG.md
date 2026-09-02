@@ -239,22 +239,35 @@ npm run check -- FC-107
 
 ---
 
-## FC-XXX - Titre
+## FC-108 - Incohérence entre le code HTTP et le corps JSON
 
 **Symptôme observé :**
+Le corps JSON pouvait décrire correctement un échec (ex: conflit métier) alors que le code HTTP retourné était inapproprié (ex: 201 pour une création échouée ou 400 pour un conflit métier). Cela empêchait les clients de comprendre la catégorie du résultat sans interpréter le texte du JSON.
 
 **Cause racine :**
+Dans `server.js`, les endpoints ne respectaient pas la sémantique REST pour les codes HTTP. Par exemple, une création échouée due à un conflit métier retournait un code 400 au lieu de 409, et une requête invalide pouvait retourner un code 201.
 
 **Correction appliquée :**
+Modification des codes HTTP dans `server.js` (lignes 299-302) pour :
+- Retourner **201** pour une création réussie,
+- Retourner **400** pour une requête invalide (ex: `INVALID_JSON` ou `validateShowShape` échoue),
+- Retourner **409** pour un conflit métier (ex: `scheduleShow` échoue).
 
 **Pourquoi cette correction respecte la documentation de référence :**
+La sémantique REST standard exige que les codes HTTP reflètent la nature de l'opération : 201 pour une création, 400 pour une requête invalide, et 409 pour un conflit métier. Cette correction aligne le système sur ces standards.
 
 **Commande de validation :**
-
 ```bash
-npm run check -- FC-XXX
+npm run check -- FC-108
 ```
 
-**Résultat :** OPEN / CLEARED
+**Résultat :**
+```bash
+> holbies-festival-control@1.3.0 check
+> node private/checker.js check FC-108
+
+✓ FC-108 — Incohérence entre le code HTTP et le corps JSON
+  INCIDENT CLEARED
+```
 
 ---

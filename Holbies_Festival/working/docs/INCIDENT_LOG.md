@@ -195,6 +195,50 @@ npm run check -- FC-106
 
 ---
 
+## FC-107 - Payload sauvage
+
+**Symptôme observé :**
+Le système acceptait des payloads pour les bracelets (`WristbandPayload`) avec :
+- des formats d'`id` et `ticketId` non conformes aux motifs définis dans le contrat API,
+- des champs supplémentaires non autorisés,
+- des valeurs non valides pour le champ `level`.
+
+**Cause racine :**
+La fonction `validateWristbandPayload` dans `accessService.js` ne validait pas :
+- les motifs des champs `id` et `ticketId` selon les expressions régulières définies dans `api-contract.yaml` (lignes 56-57),
+- la présence exclusive des champs autorisés (`id`, `ticketId`, `level`),
+- les valeurs autorisées pour `level` (`STANDARD`, `VIP`, `CREW`, `ARTIST`).
+
+**Correction appliquée :**
+Ajout de validations complètes dans `validateWristbandPayload` (lignes 42-58) :
+- Vérification des champs autorisés (ligne 46-48),
+- Validation de `id` avec `^WB-[0-9]{3,}$` (ligne 51-52),
+- Validation de `ticketId` avec `^TK-[0-9]{3,}$` (ligne 55-56),
+- Validation de `level` contre les valeurs autorisées (ligne 59-60).
+
+**Pourquoi cette correction respecte la documentation de référence :**
+Le schéma `WristbandPayload` dans `api-contract.yaml` (lignes 51-60) définit :
+- les champs requis et `additionalProperties: false` (ligne 54),
+- les motifs pour `id` et `ticketId` (lignes 56-57),
+- les valeurs possibles pour `level` (lignes 58-60).
+
+**Commande de validation :**
+```bash
+npm run check -- FC-107
+```
+
+**Résultat :**
+```bash
+> holbies-festival-control@1.3.0 check
+> node private/checker.js check FC-107
+
+
+✓ FC-107 — Payload sauvage
+  INCIDENT CLEARED
+```
+
+---
+
 ## FC-XXX - Titre
 
 **Symptôme observé :**

@@ -118,5 +118,17 @@
     "type": "UNLOCK",
     "id": "FC-106",
     "message": "ACTE 4 DÉVERROUILLÉ — LE SYSTÈME MENT"
+  },
+  {
+    "ts": "2026-09-02T14:20:34.917Z",
+    "type": "FAILED",
+    "id": "FC-107",
+    "message": "FC-107 · checker échoué — Un niveau inconnu doit être rejeté.\n\nfalse !== true\n"
+  },
+  {
+    "ts": "2026-09-02T14:43:02.286Z",
+    "type": "CLEARED",
+    "id": "FC-107",
+    "message": "FC-107 · Payload sauvage — INCIDENT CLEARED (+100 XP)"
   }
 ]

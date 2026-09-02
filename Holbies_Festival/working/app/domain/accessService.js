@@ -37,8 +37,29 @@ function registerExit(state, wristbandId, zoneId, now = new Date()) {
 }
 
 function validateWristbandPayload(payload) {
-  if (!payload || !payload.id || !payload.ticketId || !payload.level) return { ok:false, code:'INVALID_PAYLOAD' };
-  return { ok:true };
+  if (!payload || typeof payload !== 'object') return { ok: false, code: 'INVALID_PAYLOAD' };
+
+  const allowedFields = ['id', 'ticketId', 'level'];
+  const payloadKeys = Object.keys(payload);
+
+  // Check for missing or extra fields
+  if (payloadKeys.length !== allowedFields.length || !allowedFields.every(field => payloadKeys.includes(field))) {
+    return { ok: false, code: 'INVALID_PAYLOAD' };
+  }
+
+  // Validate id format
+  const idPattern = /^WB-[0-9]{3,}$/;
+  if (!idPattern.test(payload.id)) return { ok: false, code: 'INVALID_ID_FORMAT' };
+
+  // Validate ticketId format
+  const ticketIdPattern = /^TK-[0-9]{3,}$/;
+  if (!ticketIdPattern.test(payload.ticketId)) return { ok: false, code: 'INVALID_TICKET_ID_FORMAT' };
+
+  // Validate level value (adjust allowed levels as needed)
+  const validLevels = ['VIP', 'STANDARD', 'CREW', 'ARTIST']; // Example levels; update based on your actual requirements
+  if (!validLevels.includes(payload.level)) return { ok: false, code: 'INVALID_LEVEL' };
+
+  return { ok: true };
 }
 
 function issueWristband(state, payload) {

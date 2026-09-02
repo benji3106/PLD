@@ -40,5 +40,47 @@
     "type": "UNLOCK",
     "id": "FC-102",
     "message": "ACTE 2 DÉVERROUILLÉ — LES PORTES S’ENTROUVRENT"
+  },
+  {
+    "ts": "2026-09-02T13:32:41.434Z",
+    "type": "FAILED",
+    "id": "FC-103",
+    "message": "FC-103 · checker échoué — Un billet annulé doit invalider son bracelet.\n\nfalse !== true\n"
+  },
+  {
+    "ts": "2026-09-02T13:35:44.672Z",
+    "type": "FAILED",
+    "id": "FC-103",
+    "message": "FC-103 · checker échoué — Expected values to be strictly deep-equal:\n\u001b[32mactual\u001b[39m \u001b[31mexpected\u001b[39m\n\n\u001b[39m'\u001b[39m\u001b[39mT\u001b[39m\u001b[39mI\u001b[39m\u001b[39mC\u001b[39m\u001b[39mK\u001b[39m\u001b[39mE\u001b[39m\u001b[39mT\u001b[39m\u001b[39m_\u001b[39m\u001b[31mI\u001b[39m\u001b[39mN\u001b[39m\u001b[32mO\u001b[39m\u001b[32mT\u001b[39m\u001b[32m_\u001b[39m\u001b[39mA\u001b[39m\u001b[39mC\u001b[39m\u001b[39mT\u001b[39m\u001b[39mI\u001b[39m\u001b[39mV\u001b[39m\u001b[39mE\u001b[39m\u001b[39m'\u001b[39m\n"
+  },
+  {
+    "ts": "2026-09-02T13:36:14.554Z",
+    "type": "FAILED",
+    "id": "FC-103",
+    "message": "FC-103 · checker échoué — Un vrai billet VIP actif doit rester valide.\n\nfalse !== true\n"
+  },
+  {
+    "ts": "2026-09-02T13:36:43.897Z",
+    "type": "FAILED",
+    "id": "FC-103",
+    "message": "FC-103 · checker échoué — Un vrai billet VIP actif doit rester valide.\n\nfalse !== true\n"
+  },
+  {
+    "ts": "2026-09-02T13:37:27.734Z",
+    "type": "CLEARED",
+    "id": "FC-103",
+    "message": "FC-103 · Bracelet fantôme — INCIDENT CLEARED (+100 XP)"
+  },
+  {
+    "ts": "2026-09-02T13:38:26.192Z",
+    "type": "CLEARED",
+    "id": "FC-103",
+    "message": "FC-103 · Bracelet fantôme — INCIDENT CLEARED (+100 XP)"
+  },
+  {
+    "ts": "2026-09-02T13:39:17.148Z",
+    "type": "FAILED",
+    "id": "FC-104",
+    "message": "FC-104 · checker échoué — VIP ne signifie pas backstage.\n\nfalse !== true\n"
   }
 ]

@@ -67,6 +67,37 @@ npm run check -- FC-102
 ---
 
 
+## FC-103 - Bracelet fantôme
+
+**Symptôme observé :**
+Il était possible d'accorder l'accès à une zone (ex: VIP Deck) en utilisant un bracelet lié à un billet non ACTIVE (ex: CANCELLED), contournant ainsi la validation de l'état du billet.
+
+**Cause racine :**
+La fonction `checkAccess` dans `accessService.js` ne vérifiait pas l'état (`status`) du billet associé au bracelet. Elle se contentait de vérifier l'existence du billet sans s'assurer qu'il était ACTIVE.
+
+**Correction appliquée :**
+Ajout d'une vérification dans `checkAccess` (ligne 10) pour rejeter l'accès si `ticket.status !== 'ACTIVE'`, retournant `{ allowed:false, code:'TICKET_INACTIVE' }`.
+
+**Pourquoi cette correction respecte la documentation de référence :**
+Le diagramme d'état (`06_ticket_state.mmd`) montre que seul l'état ACTIVE est valide pour un accès. La séquence d'accès (`03_access_sequence.mmd:12`) exige explicitement de vérifier que le billet est actif.
+
+**Commande de validation :**
+```bash
+npm run check -- FC-103
+```
+
+**Résultat :**
+```bash
+> holbies-festival-control@1.3.0 check
+> node private/checker.js check FC-103
+
+
+✓ FC-103 — Bracelet fantôme
+  INCIDENT CLEARED
+```
+
+---
+
 ## FC-105 - Scène morte : Transition non autorisée de EVACUATED vers LIVE
 
 **Symptôme observé :**
@@ -97,6 +128,7 @@ npm run check -- FC-105
 ```
 
 ---
+
 ## FC-XXX - Titre
 
 **Symptôme observé :**

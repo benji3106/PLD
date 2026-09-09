@@ -1,4 +1,6 @@
 {
-  "id": null,
-  "lastReplay": null
+  "id": "RAD-102",
+  "lastReplay": "2026-09-09T14:10:53.030Z",
+  "symptom": "Un ancien article mis a jour aujourd hui est presente comme une nouveaute.",
+  "topic": "Fraicheur et dates"
 }

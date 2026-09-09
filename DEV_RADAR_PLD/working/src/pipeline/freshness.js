@@ -1,5 +1,5 @@
 export function effectiveEventDate(item) {
-  return item.updatedAt || item.publishedAt;
+  return item.publishedAt || item.updatedAt;
 }
 
 export function isFresh(item, now, maxAgeHours) {

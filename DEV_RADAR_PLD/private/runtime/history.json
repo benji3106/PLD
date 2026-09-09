@@ -481,5 +481,166 @@
     "ok": true,
     "message": "CLEARED",
     "at": "2026-09-09T14:12:13.131Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:15:01.986Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:16:01.477Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:16:02.576Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:16:05.170Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:16:13.140Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:16:18.594Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:17:39.727Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:18:26.786Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:18:47.294Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:19:35.233Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:19:37.850Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:20:09.802Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:20:11.772Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:20:54.435Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:21:00.350Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:21:33.974Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:22:12.051Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:23:11.924Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:23:34.382Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:24:57.328Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:25:11.997Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:25:14.650Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:25:48.323Z"
   }
 ]

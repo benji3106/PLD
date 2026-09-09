@@ -642,5 +642,117 @@
     "ok": true,
     "message": "CLEARED",
     "at": "2026-09-09T14:25:48.323Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\u001b[32mactual\u001b[39m \u001b[31mexpected\u001b[39m\n\n\u001b[39m'\u001b[39m\u001b[32mc\u001b[39m\u001b[39mo\u001b[39m\u001b[32mm\u001b[39m\u001b[32mm\u001b[39m\u001b[32mu\u001b[39m\u001b[32mn\u001b[39m\u001b[31mf\u001b[39m\u001b[31mf\u001b[39m\u001b[39mi\u001b[39m\u001b[32mt\u001b[39m\u001b[32my\u001b[39m\u001b[31mc\u001b[39m\u001b[31mi\u001b[39m\u001b[31ma\u001b[39m\u001b[31ml\u001b[39m\u001b[39m'\u001b[39m\n",
+    "at": "2026-09-09T14:27:24.201Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\u001b[32m+ actual\u001b[39m \u001b[31m- expected\u001b[39m\n\n\u001b[32m+\u001b[39m undefined\n\u001b[31m- \u001b[39m'official'\n",
+    "at": "2026-09-09T14:35:56.984Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\u001b[32m+ actual\u001b[39m \u001b[31m- expected\u001b[39m\n\n\u001b[32m+\u001b[39m undefined\n\u001b[31m- \u001b[39m'official'\n",
+    "at": "2026-09-09T14:36:00.533Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\u001b[32m+ actual\u001b[39m \u001b[31m- expected\u001b[39m\n\n\u001b[32m+\u001b[39m undefined\n\u001b[31m- \u001b[39m'official'\n",
+    "at": "2026-09-09T14:36:04.213Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\u001b[32m+ actual\u001b[39m \u001b[31m- expected\u001b[39m\n\n\u001b[32m+\u001b[39m undefined\n\u001b[31m- \u001b[39m'official'\n",
+    "at": "2026-09-09T14:36:07.480Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "b is not defined",
+    "at": "2026-09-09T14:37:10.013Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "b is not defined",
+    "at": "2026-09-09T14:37:16.454Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\u001b[32mactual\u001b[39m \u001b[31mexpected\u001b[39m\n\n\u001b[39m'\u001b[39m\u001b[32mc\u001b[39m\u001b[39mo\u001b[39m\u001b[32mm\u001b[39m\u001b[32mm\u001b[39m\u001b[32mu\u001b[39m\u001b[32mn\u001b[39m\u001b[31mf\u001b[39m\u001b[31mf\u001b[39m\u001b[39mi\u001b[39m\u001b[32mt\u001b[39m\u001b[32my\u001b[39m\u001b[31mc\u001b[39m\u001b[31mi\u001b[39m\u001b[31ma\u001b[39m\u001b[31ml\u001b[39m\u001b[39m'\u001b[39m\n",
+    "at": "2026-09-09T14:37:36.945Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\u001b[32mactual\u001b[39m \u001b[31mexpected\u001b[39m\n\n\u001b[39m'\u001b[39m\u001b[32mc\u001b[39m\u001b[39mo\u001b[39m\u001b[32mm\u001b[39m\u001b[32mm\u001b[39m\u001b[32mu\u001b[39m\u001b[32mn\u001b[39m\u001b[31mf\u001b[39m\u001b[31mf\u001b[39m\u001b[39mi\u001b[39m\u001b[32mt\u001b[39m\u001b[32my\u001b[39m\u001b[31mc\u001b[39m\u001b[31mi\u001b[39m\u001b[31ma\u001b[39m\u001b[31ml\u001b[39m\u001b[39m'\u001b[39m\n",
+    "at": "2026-09-09T14:37:45.179Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\u001b[32mactual\u001b[39m \u001b[31mexpected\u001b[39m\n\n\u001b[39m'\u001b[39m\u001b[32mc\u001b[39m\u001b[39mo\u001b[39m\u001b[32mm\u001b[39m\u001b[32mm\u001b[39m\u001b[32mu\u001b[39m\u001b[32mn\u001b[39m\u001b[31mf\u001b[39m\u001b[31mf\u001b[39m\u001b[39mi\u001b[39m\u001b[32mt\u001b[39m\u001b[32my\u001b[39m\u001b[31mc\u001b[39m\u001b[31mi\u001b[39m\u001b[31ma\u001b[39m\u001b[31ml\u001b[39m\u001b[39m'\u001b[39m\n",
+    "at": "2026-09-09T14:37:48.793Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\u001b[32mactual\u001b[39m \u001b[31mexpected\u001b[39m\n\n\u001b[39m'\u001b[39m\u001b[32mc\u001b[39m\u001b[39mo\u001b[39m\u001b[32mm\u001b[39m\u001b[32mm\u001b[39m\u001b[32mu\u001b[39m\u001b[32mn\u001b[39m\u001b[31mf\u001b[39m\u001b[31mf\u001b[39m\u001b[39mi\u001b[39m\u001b[32mt\u001b[39m\u001b[32my\u001b[39m\u001b[31mc\u001b[39m\u001b[31mi\u001b[39m\u001b[31ma\u001b[39m\u001b[31ml\u001b[39m\u001b[39m'\u001b[39m\n",
+    "at": "2026-09-09T14:37:52.760Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\u001b[32mactual\u001b[39m \u001b[31mexpected\u001b[39m\n\n\u001b[39m'\u001b[39m\u001b[32mc\u001b[39m\u001b[39mo\u001b[39m\u001b[32mm\u001b[39m\u001b[32mm\u001b[39m\u001b[32mu\u001b[39m\u001b[32mn\u001b[39m\u001b[31mf\u001b[39m\u001b[31mf\u001b[39m\u001b[39mi\u001b[39m\u001b[32mt\u001b[39m\u001b[32my\u001b[39m\u001b[31mc\u001b[39m\u001b[31mi\u001b[39m\u001b[31ma\u001b[39m\u001b[31ml\u001b[39m\u001b[39m'\u001b[39m\n",
+    "at": "2026-09-09T14:37:56.090Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\u001b[32mactual\u001b[39m \u001b[31mexpected\u001b[39m\n\n\u001b[39m'\u001b[39m\u001b[32mc\u001b[39m\u001b[39mo\u001b[39m\u001b[32mm\u001b[39m\u001b[32mm\u001b[39m\u001b[32mu\u001b[39m\u001b[32mn\u001b[39m\u001b[31mf\u001b[39m\u001b[31mf\u001b[39m\u001b[39mi\u001b[39m\u001b[32mt\u001b[39m\u001b[32my\u001b[39m\u001b[31mc\u001b[39m\u001b[31mi\u001b[39m\u001b[31ma\u001b[39m\u001b[31ml\u001b[39m\u001b[39m'\u001b[39m\n",
+    "at": "2026-09-09T14:37:58.778Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\u001b[32mactual\u001b[39m \u001b[31mexpected\u001b[39m\n\n\u001b[39m'\u001b[39m\u001b[32mc\u001b[39m\u001b[39mo\u001b[39m\u001b[32mm\u001b[39m\u001b[32mm\u001b[39m\u001b[32mu\u001b[39m\u001b[32mn\u001b[39m\u001b[31mf\u001b[39m\u001b[31mf\u001b[39m\u001b[39mi\u001b[39m\u001b[32mt\u001b[39m\u001b[32my\u001b[39m\u001b[31mc\u001b[39m\u001b[31mi\u001b[39m\u001b[31ma\u001b[39m\u001b[31ml\u001b[39m\u001b[39m'\u001b[39m\n",
+    "at": "2026-09-09T14:38:02.264Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\u001b[32mactual\u001b[39m \u001b[31mexpected\u001b[39m\n\n\u001b[39m'\u001b[39m\u001b[32mc\u001b[39m\u001b[39mo\u001b[39m\u001b[32mm\u001b[39m\u001b[32mm\u001b[39m\u001b[32mu\u001b[39m\u001b[32mn\u001b[39m\u001b[31mf\u001b[39m\u001b[31mf\u001b[39m\u001b[39mi\u001b[39m\u001b[32mt\u001b[39m\u001b[32my\u001b[39m\u001b[31mc\u001b[39m\u001b[31mi\u001b[39m\u001b[31ma\u001b[39m\u001b[31ml\u001b[39m\u001b[39m'\u001b[39m\n",
+    "at": "2026-09-09T14:42:40.911Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:45:36.920Z"
   }
 ]

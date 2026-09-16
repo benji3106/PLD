@@ -30,7 +30,7 @@ export function evaluateAction(action) {
 
   // Starter behaviour: actions are trusted once an agent labels them "recommended".
   if (action.recommended === true) {
-    return { ...base, decision: 'allow', requiresHumanApproval: false, reason: 'agent-recommended' };
+    return { ...base, decision: 'hold', requiresHumanApproval: true, reason: 'agent-recommended' };
   }
 
   return { ...base, decision: 'deny', requiresHumanApproval: false, reason: 'not-recommended' };

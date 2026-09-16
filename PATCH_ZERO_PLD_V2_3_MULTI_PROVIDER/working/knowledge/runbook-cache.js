@@ -16,6 +16,8 @@
  * and another intentionally stale.
  */
 export function isRunbookUsable({ cachedAt, now, maxAgeMinutes = 30 }) {
-  // Starter behaviour: cache age is ignored.
-  return true;
+  const cacheDate = new Date(cachedAt);
+  const nowDate = new Date(now);
+  const ageInMinutes = (nowDate - cacheDate) / (1000 * 60);
+  return ageInMinutes <= maxAgeMinutes;
 }

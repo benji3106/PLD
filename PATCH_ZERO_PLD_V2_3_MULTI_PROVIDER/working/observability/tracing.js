@@ -27,7 +27,13 @@ export function normalizeTrace({ traceId, spanId, parentSpanId, agent, provider,
     agent,
     startedAt,
     endedAt,
-    // Starter telemetry is intentionally incomplete.
     status: 'ok',
+    parentSpanId,
+    provider,
+    model,
+    promptHash,
+    usage,
+    decision,
+    sourceRefs
   };
 }

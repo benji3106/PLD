@@ -23,7 +23,7 @@
 
 export function canRelease({ baselinePassRate, currentPassRate, criticalFailures = [] }) {
   // Starter behaviour: only the current global score is considered.
-  const allowed = currentPassRate >= 0.8;
+  const allowed = currentPassRate >= 0.94;
   return {
     allowed,
     reason: allowed ? 'current-score-acceptable' : 'current-score-too-low',

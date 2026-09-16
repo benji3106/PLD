@@ -20,8 +20,8 @@
  * another decision or another review callback. Replay PX-102 to observe the contract.
  */
 
-const MAX_REVIEW_TURNS = 50;
-const MAX_BUDGET_USD = 5;
+const MAX_REVIEW_TURNS = 4;
+const MAX_BUDGET_USD = 0.024;
 
 export async function runReviewLoop({ initialDecision, reviewStep }) {
   let decision = initialDecision;

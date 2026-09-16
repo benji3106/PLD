@@ -18,6 +18,12 @@
  * Give each role only the tools it really needs.
  */
 export function toolsForAgent(agentId) {
-  // Starter behaviour: every role receives the same over-powered toolbox.
-  return ['read_ticket', 'read_player', 'ban_player', 'rollback_global', 'market_write'];
+  switch (agentId) {
+    case 'support':
+      return ['read_ticket', 'read_player'];
+    case 'release':
+      return ['rollback_global'];
+    default:
+      return [];
+  }
 }

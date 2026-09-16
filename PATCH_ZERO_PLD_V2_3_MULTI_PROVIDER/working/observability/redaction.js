@@ -15,6 +15,20 @@
  * must remain useful after redaction.
  */
 export function redactTracePayload(payload) {
-  // Starter behaviour: telemetry stores the raw payload unchanged.
-  return structuredClone(payload);
+  if (!payload || typeof payload !== 'object') {
+    return payload;
+  }
+
+  const redacted = structuredClone(payload);
+
+  // Redact player-sensitive fields
+  if (redacted.player) {
+    if (redacted.player.email) redacted.player.email = '[REDACTED]';
+    if (redacted.player.sessionToken) redacted.player.sessionToken = '[REDACTED]';
+  }
+
+  // Redact payment-sensitive fields
+  if (redacted.paymentRef) redacted.paymentRef = '[REDACTED]';
+
+  return redacted;
 }

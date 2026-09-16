@@ -22,7 +22,14 @@
 
 export function resolvePatchFact({ officialManifest, agentSummary }) {
   // Starter behaviour: the most fluent answer wins.
-  return {
+  return officialManifest? {
+    source: 'official-manifest',
+    patchId: officialManifest.patchId,
+    feature: officialManifest.feature,
+    enabled: officialManifest.enabled,
+    notes: officialManifest.notes,
+  }:
+  {
     source: 'agent-summary',
     patchId: agentSummary.patchId,
     feature: agentSummary.feature,

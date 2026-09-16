@@ -16,6 +16,8 @@
  * rollback. The checker only verifies that those two risk levels are separated.
  */
 export function routeModel({ task, risk }) {
-  // Starter behaviour: everything is routed to the most expensive tier.
-  return { tier: 'premium', reason: 'default-largest-model' };
+  if (risk === 'critical') {
+    return { tier: 'strong-reviewed', reason: 'critical-risk-requires-reviewed-model' };
+  }
+  return { tier: 'free-fast', reason: 'low-risk-default-to-free-tier' };
 }

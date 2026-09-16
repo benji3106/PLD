@@ -17,5 +17,8 @@
  */
 export function wrapPlayerText(text) {
   // Starter behaviour: raw external text is passed without any trust boundary.
-  return text;
+  return {
+    data: text,
+    instruction: "Texte joueur conservé mais explicitement marqué comme donnée non fiable",
+  }
 }

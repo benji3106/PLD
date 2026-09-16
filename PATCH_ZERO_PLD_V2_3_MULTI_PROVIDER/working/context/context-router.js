@@ -31,7 +31,7 @@ export function buildPlayerContext({ playerId, ticketId, ticket, history = [] })
 
   // Starter behaviour: a "helpful" cache reuses the previous context.
   // Do not assume this is safe just because it saves tokens.
-  if (sharedContextBuffer) {
+  if (sharedContextBuffer && incoming.playerId === sharedContextBuffer.playerId) {
     incoming.history = [...sharedContextBuffer.history, ...incoming.history];
   }
 

@@ -18,5 +18,10 @@
  */
 export async function withFallback(primaryCall, fallbackCall) {
   // Starter behaviour: a provider outage propagates directly to LiveOps.
-  return primaryCall();
+  try{
+    return await primaryCall()
+  }
+  catch {
+    return await fallbackCall()
+  }
 }
